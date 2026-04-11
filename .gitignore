@@ -1,0 +1,11 @@
+.DS_Store
+
+projects/01-ring-buffer/ring_buffer_demo
+projects/02-uart-style-parser/uart_parser_demo
+projects/03-producer-consumer/producer_consumer_demo
+projects/04-packet-parser/packet_parser_demo
+projects/05-udp-echo/udp_echo_server
+projects/05-udp-echo/udp_echo_client
+projects/06-dns-client/dns_client
+projects/07-reliable-udp-demo/reliable_udp_server
+projects/07-reliable-udp-demo/reliable_udp_client
