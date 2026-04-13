@@ -11,3 +11,4 @@ projects/07-reliable-udp-demo/reliable_udp_server
 projects/07-reliable-udp-demo/reliable_udp_client
 projects/08-binary-framed-parser/binary_framed_parser_demo
 projects/09-thread-safe-logger/thread_safe_logger_demo
+projects/10-wsn-sensor-gateway-simulator/wsn_gateway_demo

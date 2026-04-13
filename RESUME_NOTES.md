@@ -64,6 +64,30 @@ Why it is strong:
 - shows multi-node reporting and gateway collection flow
 - adds packet loss and battery-awareness to the project story
 
+### 6. Binary Framed Parser
+
+Path:
+
+- `projects/08-binary-framed-parser`
+
+Why it is strong:
+
+- shows binary protocol parsing rather than only text commands
+- demonstrates state-machine parsing
+- connects well to firmware communication scenarios
+
+### 7. Thread-Safe Logger
+
+Path:
+
+- `projects/09-thread-safe-logger`
+
+Why it is strong:
+
+- shows reusable systems-style component design
+- demonstrates synchronization around a shared resource
+- easy to discuss in OS / concurrency interviews
+
 ## Chinese Resume Version
 
 以 C 語言實作一系列偏韌體與底層系統的練習專案，涵蓋 ring buffer、
@@ -72,6 +96,7 @@ UDP echo、DNS client、基於 UDP 的簡易可靠傳輸機制，以及無線感
 sensor-to-gateway 模擬。過程中實作固定大小 buffer 管理、byte stream
 parsing、thread synchronization、binary protocol field extraction、UDP 傳輸、
 簡化版 seq/ack/retry 流程，以及節點回報、封包遺失與 gateway 資料彙整邏輯。
+另外也包含 binary framed protocol parser 與 thread-safe logger，補強狀態機解析與共享資源同步能力。
 
 ## English Resume Version
 
@@ -81,7 +106,9 @@ echo, a DNS client, a simple reliable-UDP mechanism, and a wireless sensor
 network style sensor-to-gateway simulator. Implemented fixed-size buffer
 management, byte stream parsing, thread synchronization, binary protocol field
 extraction, UDP communication, simplified sequence/ack/retry logic, and
-multi-node reporting with packet loss simulation.
+multi-node reporting with packet loss simulation. Also includes a binary framed
+protocol parser and a thread-safe logger to strengthen state-machine parsing and
+shared-resource synchronization skills.
 
 ## Short Resume Bullet Variants
 
@@ -93,6 +120,10 @@ multi-node reporting with packet loss simulation.
   including a reliable UDP demo with sequence, ACK, timeout, and retry logic.
 - Simulated a wireless sensor network style node-to-gateway reporting flow with
   packet loss and simple reliability metrics.
+- Built a binary framed protocol parser with state-machine logic, payload length
+  validation, and checksum checking.
+- Implemented a thread-safe logger in C using `pthread_mutex_t` for safe
+  multi-threaded logging.
 
 ## Interview Talking Points
 
@@ -112,6 +143,8 @@ logic.
 - how UDP differs from TCP
 - how reliability ideas like ACK and retransmission can be built on top of UDP
 - how sensing nodes and a gateway can be modeled in a simple reliable networking flow
+- how binary framed protocols can be parsed safely with a state machine
+- how to protect a shared utility with synchronization primitives
 
 ## Suggested Projects To Put On Resume First
 
@@ -120,3 +153,5 @@ logic.
 3. `projects/06-dns-client`
 4. `projects/07-reliable-udp-demo`
 5. `projects/10-wsn-sensor-gateway-simulator`
+6. `projects/08-binary-framed-parser`
+7. `projects/09-thread-safe-logger`

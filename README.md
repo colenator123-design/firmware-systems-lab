@@ -17,7 +17,9 @@ flowchart LR
     D --> E[05 UDP Echo]
     E --> F[06 DNS Client]
     F --> G[07 Reliable UDP Demo]
-    G --> H[10 WSN Sensor Gateway Simulator]
+    G --> H[08 Binary Framed Parser]
+    H --> I[09 Thread-Safe Logger]
+    I --> J[10 WSN Sensor Gateway Simulator]
 ```
 
 ## Firmware Data Flow Themes
@@ -39,6 +41,8 @@ flowchart LR
 - UDP client/server behavior
 - DNS packet construction and parsing
 - basic reliability ideas built on top of UDP
+- binary framed protocol parsing
+- thread-safe shared utility design
 - wireless sensor network style node-to-gateway simulation
 
 ## Project Roadmap
@@ -131,6 +135,31 @@ Concepts:
 - timeout and retry
 - stop-and-wait reliability
 
+### 08. Binary Framed Parser
+
+Path:
+
+- `projects/08-binary-framed-parser`
+
+Concepts:
+
+- frame header parsing
+- length-delimited payload handling
+- checksum validation
+- state machine parsing
+
+### 09. Thread-Safe Logger
+
+Path:
+
+- `projects/09-thread-safe-logger`
+
+Concepts:
+
+- mutex-protected shared resource access
+- multi-thread safe component design
+- timestamped logging
+
 ### 10. WSN Sensor Gateway Simulator
 
 Path:
@@ -154,7 +183,9 @@ Concepts:
 5. `projects/05-udp-echo`
 6. `projects/06-dns-client`
 7. `projects/07-reliable-udp-demo`
-8. `projects/10-wsn-sensor-gateway-simulator`
+8. `projects/08-binary-framed-parser`
+9. `projects/09-thread-safe-logger`
+10. `projects/10-wsn-sensor-gateway-simulator`
 
 ## Why This Repo Exists
 
@@ -179,5 +210,7 @@ This repo is meant to strengthen firmware-style foundations:
 - DNS
 - Producer Consumer
 - `pthread`
+- State Machine Parser
+- Thread-Safe Logger
 - Wireless Sensor Networks
 - Gateway Simulation
