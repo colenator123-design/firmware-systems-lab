@@ -17,6 +17,7 @@ flowchart LR
     D --> E[05 UDP Echo]
     E --> F[06 DNS Client]
     F --> G[07 Reliable UDP Demo]
+    G --> H[10 WSN Sensor Gateway Simulator]
 ```
 
 ## Firmware Data Flow Themes
@@ -38,6 +39,7 @@ flowchart LR
 - UDP client/server behavior
 - DNS packet construction and parsing
 - basic reliability ideas built on top of UDP
+- wireless sensor network style node-to-gateway simulation
 
 ## Project Roadmap
 
@@ -129,6 +131,20 @@ Concepts:
 - timeout and retry
 - stop-and-wait reliability
 
+### 10. WSN Sensor Gateway Simulator
+
+Path:
+
+- `projects/10-wsn-sensor-gateway-simulator`
+
+Concepts:
+
+- multiple sensor nodes
+- gateway collection flow
+- packet loss simulation
+- battery drain tracking
+- basic reliability metrics
+
 ## Suggested Reading Order
 
 1. `projects/01-ring-buffer`
@@ -138,6 +154,7 @@ Concepts:
 5. `projects/05-udp-echo`
 6. `projects/06-dns-client`
 7. `projects/07-reliable-udp-demo`
+8. `projects/10-wsn-sensor-gateway-simulator`
 
 ## Why This Repo Exists
 
@@ -162,3 +179,5 @@ This repo is meant to strengthen firmware-style foundations:
 - DNS
 - Producer Consumer
 - `pthread`
+- Wireless Sensor Networks
+- Gateway Simulation

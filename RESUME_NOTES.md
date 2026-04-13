@@ -52,21 +52,36 @@ Why it is strong:
 - shows sequence / ack / retry thinking
 - demonstrates understanding of what UDP does not guarantee
 
+### 5. WSN Sensor Gateway Simulator
+
+Path:
+
+- `projects/10-wsn-sensor-gateway-simulator`
+
+Why it is strong:
+
+- aligns well with sensing and reliable networking themes
+- shows multi-node reporting and gateway collection flow
+- adds packet loss and battery-awareness to the project story
+
 ## Chinese Resume Version
 
 以 C 語言實作一系列偏韌體與底層系統的練習專案，涵蓋 ring buffer、
 UART-style parser、producer-consumer synchronization、IPv4 packet parsing、
-UDP echo、DNS client 與基於 UDP 的簡易可靠傳輸機制。過程中實作固定大小
-buffer 管理、byte stream parsing、thread synchronization、binary protocol
-field extraction、UDP 傳輸與簡化版 seq/ack/retry 流程。
+UDP echo、DNS client、基於 UDP 的簡易可靠傳輸機制，以及無線感測網路風格的
+sensor-to-gateway 模擬。過程中實作固定大小 buffer 管理、byte stream
+parsing、thread synchronization、binary protocol field extraction、UDP 傳輸、
+簡化版 seq/ack/retry 流程，以及節點回報、封包遺失與 gateway 資料彙整邏輯。
 
 ## English Resume Version
 
 Built a firmware-oriented C project portfolio covering a ring buffer,
 UART-style parser, producer-consumer synchronization, IPv4 packet parsing, UDP
-echo, a DNS client, and a simple reliable-UDP mechanism. Implemented fixed-size
-buffer management, byte stream parsing, thread synchronization, binary protocol
-field extraction, UDP communication, and simplified sequence/ack/retry logic.
+echo, a DNS client, a simple reliable-UDP mechanism, and a wireless sensor
+network style sensor-to-gateway simulator. Implemented fixed-size buffer
+management, byte stream parsing, thread synchronization, binary protocol field
+extraction, UDP communication, simplified sequence/ack/retry logic, and
+multi-node reporting with packet loss simulation.
 
 ## Short Resume Bullet Variants
 
@@ -76,6 +91,8 @@ field extraction, UDP communication, and simplified sequence/ack/retry logic.
   management, binary protocol parsing, and thread synchronization.
 - Implemented small firmware-style and network-protocol exercises in C,
   including a reliable UDP demo with sequence, ACK, timeout, and retry logic.
+- Simulated a wireless sensor network style node-to-gateway reporting flow with
+  packet loss and simple reliability metrics.
 
 ## Interview Talking Points
 
@@ -94,6 +111,7 @@ logic.
 - how to parse protocol fields from raw network data
 - how UDP differs from TCP
 - how reliability ideas like ACK and retransmission can be built on top of UDP
+- how sensing nodes and a gateway can be modeled in a simple reliable networking flow
 
 ## Suggested Projects To Put On Resume First
 
@@ -101,3 +119,4 @@ logic.
 2. `projects/03-producer-consumer`
 3. `projects/06-dns-client`
 4. `projects/07-reliable-udp-demo`
+5. `projects/10-wsn-sensor-gateway-simulator`
