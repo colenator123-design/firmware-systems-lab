@@ -17,8 +17,10 @@ It connects several ideas that match reliable networking and sensing systems:
 - periodic sensor reporting
 - node-to-gateway communication flow
 - dropped packet simulation
+- retry on/off scenario comparison
 - gateway-side packet accounting
 - simple battery drain tracking
+- experiment result generation
 
 ## Build
 
@@ -33,13 +35,37 @@ make
 ./wsn_gateway_demo
 ```
 
+The simulator writes:
+
+```sh
+results/scenario_metrics.csv
+```
+
+## Experiment Snapshot
+
+| Scenario | Delivery Ratio | Avg Battery |
+| --- | ---: | ---: |
+| low_loss_no_retry | 91.7% | 90.4% |
+| medium_loss_no_retry | 80.6% | 90.4% |
+| high_loss_no_retry | 66.7% | 90.4% |
+| medium_loss_with_retry | 91.7% | 89.9% |
+| high_loss_with_retry | 91.7% | 89.6% |
+
+Key finding:
+
+- retry recovers delivery ratio under medium and high loss
+- retry improves reliability but consumes slightly more battery
+
 ## Files
 
-- `main.c`: sensor node simulation, packet loss logic, gateway accounting
+- `main.c`: scenario runner, node simulation, retry logic, gateway accounting
+- `docs/ARCHITECTURE.md`: system view
+- `docs/EXPERIMENTS.md`: experiment setup and chart template
+- `results/scenario_metrics.csv`: generated experiment metrics
 
 ## Good Next Upgrades
 
-1. add retransmission logic
-2. add per-node reporting intervals
-3. add gateway-side anomaly detection
-4. export metrics to a log file
+1. add per-node reporting intervals
+2. add gateway-side anomaly detection
+3. add variable node counts from config
+4. add latency metrics

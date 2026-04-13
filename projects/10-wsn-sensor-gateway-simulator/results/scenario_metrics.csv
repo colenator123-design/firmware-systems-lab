@@ -1,0 +1,6 @@
+scenario,received,dropped,delivery_ratio,retry_attempts,retry_successes,average_battery
+low_loss_no_retry,33,3,91.7,0,0,90.4
+medium_loss_no_retry,29,7,80.6,0,0,90.4
+high_loss_no_retry,24,12,66.7,0,0,90.4
+medium_loss_with_retry,33,3,91.7,7,4,89.9
+high_loss_with_retry,33,3,91.7,12,9,89.6
