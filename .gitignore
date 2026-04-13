@@ -9,3 +9,5 @@ projects/05-udp-echo/udp_echo_client
 projects/06-dns-client/dns_client
 projects/07-reliable-udp-demo/reliable_udp_server
 projects/07-reliable-udp-demo/reliable_udp_client
+projects/08-binary-framed-parser/binary_framed_parser_demo
+projects/09-thread-safe-logger/thread_safe_logger_demo
